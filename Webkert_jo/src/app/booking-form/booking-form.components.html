@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idópont Foglalás</title>
+</head>
+<body>
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+          <mat-label>Név</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Dátum</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="date" />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!bookingForm.valid">Foglalás</button>
+      </form>
+      
+      
+      
+      
+</body>
+</html>

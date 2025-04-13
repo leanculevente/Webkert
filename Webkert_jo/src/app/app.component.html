@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5D Ultrahang</title>
+</head>
+<body>
+    <mat-toolbar color="primary">
+        <span>5D Ultrahang Időpontfoglalás</span>
+      </mat-toolbar>
+      <main fxLayout="column" fxLayoutAlign="center center">
+        <mat-card>
+          <mat-card-title>Üdvözöljük!</mat-card-title>
+          <mat-card-content>
+            <p>Jelenleg {{ availableAppointments }} elérhető időpont van.</p>
+            <app-appointment-list [availableCount]="availableAppointments"></app-appointment-list>
+          </mat-card-content>
+        </mat-card>
+      </main>
+</body>
+</html>
